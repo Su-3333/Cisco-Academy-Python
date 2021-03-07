@@ -2,16 +2,9 @@ hour = int(input("Starting time (hours): "))
 mins = int(input("Starting time (minutes): "))
 dura = int(input("Event duration (minutes): "))
 
-duraInHours = dura // 60
-duraInMinutes = dura % 60
+mins = mins + dura  # finds updated mins after duration
+hour = hour + mins // 60  # finds the extra hours from updated mins to add to hour
+mins = mins % 60  # extra mins beyond the hour to be find in updated mins
+hour = hour % 24  # remainder left over,
 
-# extra hour if minutes go beyond 60
-minuteBeyondHour = (duraInMinutes + mins) // 60
-addedHour = minuteBeyondHour + duraInHours + hour
-
-# minutes on clock
-
-
-
-print(addedHour)
-print()
+print(hour, ":", mins, sep='')
