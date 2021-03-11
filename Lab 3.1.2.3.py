@@ -12,7 +12,6 @@ print(
 """)
 number = int(input("Enter a whole number: "))
 
-
 while number != secret_number:
     print("Ha ha! You're stuck in my loop!")
     number = int(input("Enter a whole number: "))
